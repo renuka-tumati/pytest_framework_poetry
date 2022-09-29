@@ -27,7 +27,7 @@ def idfn(val):
 
 
 @pytest.mark.parametrize("a,b,expected", testdata, ids=idfn)
-def test_timedistance_v2(a, b, expected):
+def test_time_distance_v2(a, b, expected):
     diff = a - b
     assert diff == expected
 
@@ -43,6 +43,6 @@ def test_timedistance_v2(a, b, expected):
         ),
     ],
 )
-def test_timedistance_v3(a, b, expected):
+def test_time_distance_v3(a, b, expected):
     diff = a - b
     assert diff == expected
