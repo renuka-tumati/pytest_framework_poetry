@@ -32,6 +32,11 @@ def test_indirect_1(fixt):
     assert len(fixt) == 3
 
 
+@pytest.mark.parametrize("fixt", ["a", "b", "1", "2"], indirect=True)
+def test_fixture_twice(fixt):
+    assert len(fixt) == 3
+
+
 @pytest.fixture(scope="function")
 def x(request):
     return request.param * 3
@@ -48,6 +53,4 @@ def test_indirect_2(x, y):
     assert y == "b"
 
 
-@pytest.mark.parametrize("fixt, fixt", [("a", "b"),("a1", "b1")], indirect=True)
-def test_fixture_twice():
-    assert len(fixt) == 3
+
