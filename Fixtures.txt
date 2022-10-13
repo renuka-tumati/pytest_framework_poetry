@@ -1,0 +1,5 @@
+
+Automatic grouping of tests by fixture instances
+pytest minimizes the number of active fixtures during test runs. If you have a parametrized fixture, then all the tests using it will first execute with one instance and then finalizers are called before the next fixture instance is created. Among other things, this eases testing of applications which create and use global state.
+
+usefixture(fixurename) can be added at a class to declare all methods need

@@ -2,6 +2,21 @@ import pytest
 from _pytest.python import Metafunc
 
 
+@pytest.fixture
+def in_put():
+    return [(2, 3)]
+
+
+@pytest.fixture
+def output():
+    return [(4, 9)]
+
+
+@pytest.mark.parametrize(in_put, output)
+def test_squared(in_put, output):
+    assert in_put ** in_put == output
+
+
 def test_compute(param1, param2):
     assert param1 < 100
 
@@ -10,9 +25,8 @@ def test_compute2(param2, param1):
     assert param2 < 100
 
 
-def range_list():
+def range_list1():
     return range(2)
-
 
 def pytest_generate_tests(metafunc):
 

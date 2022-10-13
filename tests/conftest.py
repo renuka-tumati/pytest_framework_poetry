@@ -1,3 +1,5 @@
+import pytest
+
 def pytest_addoption(parser):
     parser.addoption(
         "--stringinput",
@@ -17,7 +19,11 @@ def test_inside_outer_conf():
     assert True
 
 
+@pytest.fixture
+def username():
+    print("\n tests conftest fixture")
+    return 'username'
 
-# content of conftest.py
 
-
+def test_username(username):
+    assert username == 'username'
