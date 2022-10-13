@@ -12,3 +12,11 @@ export PYTHONPATH="${PYTHONPATH}:/path/to/project/"
 On Windows
 
 set PYTHONPATH=%PYTHONPATH%;C:\Users\renuka.tumati\git\pytest_framework_poetry\
+
+
+Pytest hooks
+Pytest ordering precedence
+conftest add options
+pytest fixtures
+pytest parameterization
+pytest report changes
