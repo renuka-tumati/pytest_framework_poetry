@@ -43,3 +43,7 @@ def test_dynamic_scope_2(num_fixture):
     print(num_fixture)
     assert True
 
+
+-- 100 - T - 10 in error
+              10 hold
+                80 loaded
